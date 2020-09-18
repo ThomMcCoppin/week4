@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<title>Week 4 In-Class</title>
+		<style>
+			
+		</style>
+		<script>
+			var my_age = 21;
+			
+			if (my_age == 25) {
+				console.log("Chud");
+			} else if (my_age < 19) {
+				console.log("Did you get your parent's permission baby?");
+			} else if (my_age >= 35) {
+				console.log("10-4 Dinosaur");
+			} else {
+				console.log("Howdy Zoomer");
+			}
+			
+			var activity = "class";
+			var next_activity;
+			var bored = false;
+			if(bored) {
+				next_activity = "league of legends";
+			}
+			else {
+				next_activity = "anime"
+			}
+			
+			console.log(next_activity);
+			
+			//boredom checker
+			
+			var me = {
+				tired_eyes: true,
+				on_phone: true,
+				mind_wandering: true
+			}
+			
+			var bored_meter = 0;
+			
+			if (me.tired_eyes) bored_meter++;
+			if (me.on_phone) bored_meter++;
+			if (me.mind_wandering) bored_meter++;
+			
+			if(bored_meter >= 2) {
+				bored=true;
+			}
+			
+			console.log(bored_meter);
+			console.log(bored);
+			
+			
+			
+			var am_i_bored = function(me_data, name) {
+				if (me.tired_eyes && me.on_phone && me.mind_wandering) {
+					console.log ("you're very bored");
+				}
+				else console.log("you're fine");
+			}
+			
+			am_i_bored(me, "Thom");
+			
+			me.tired_eyes = false;
+			
+			am_i_bored(me, "Thom");
+			
+		</script>
+	</head>
+	<body>
+		<h1> Week 4 In-Class </h1>
+	</body>
+</html>

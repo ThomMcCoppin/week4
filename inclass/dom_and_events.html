@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title> </title>
+	</head>
+	<body>
+		<h1 id="heading"> </h1> 
+		
+		<p>
+			User text: <span id="user_text"></span>
+		</p>
+		
+		<input type="text">
+		<button>Search</button>
+		
+		<script>
+			
+			var empty_heading = document.getElementById("heading");
+			console.log(empty_heading);
+			console.log(empty_heading.innerText);
+			empty_heading.innerText = "Hello world!";
+			
+			var user_text = document.getElementById("user_text");
+			//var input = prompt ("What would you like to say?");
+			//user_text.innerText	= input;	
+			
+			var text_input = document.getElementsByTagName("input")[0]; //this be an array
+			var button = document.getElementsByTagName("button")[0];
+			
+			
+			var captureText = function() {
+				
+				console.error("button was clicked!");
+				//get text for input
+				var words = text_input.value;
+				// put it on the page
+				user_text.innerText = words;
+				}
+			
+			button.addEventListener("click", captureText);
+		</script>
+	</body>
+</html>
